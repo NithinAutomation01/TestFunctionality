@@ -72,7 +72,7 @@
     <version.dumbster>1.9.0.2</version.dumbster>
     <version.hamcrest>1.3</version.hamcrest>
     <version.hsqldb>2.3.3</version.hsqldb>
-    <version.htmlunit>2.21</version.htmlunit>
+    <version.htmlunit>2.37.0</version.htmlunit>
     <version.javadoc>2.10.3</version.javadoc>
     <version.javax.mail>1.5.5</version.javax.mail>
     <version.junit>4.12</version.junit>
