@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\user\workspace\Test\UtilityApplication.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods, 5 failed,   16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="ImageComparison_ThirdPage_BAU">ImageComparison_ThirdPage_BAU</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="PageValidation_NSA">PageValidation_NSA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="RandomImageComparison">RandomImageComparison</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.ReportGeneration" hash-for-method="TC005_ExcelDataValidation">TC005_ExcelDataValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="fontType_NegativeScenario">fontType_NegativeScenario</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="BAU_FirstPageTextualValidations">BAU_FirstPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="BAU_SecondPageTextualValidations">BAU_SecondPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="BAU_ThirdPageTextualValidations">BAU_ThirdPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="ImageComparison_FirstPage_BAU">ImageComparison_FirstPage_BAU</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="NSA_FirstPageTextualValidations">NSA_FirstPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="NSA_SecondPageTextualValidations">NSA_SecondPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="NSA_ThirdPageTextualValidations">NSA_ThirdPageTextualValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="PageValidation_BAU">PageValidation_BAU</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.ReportGeneration" hash-for-method="TC001_JsonRequest_validation">TC001_JsonRequest_validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.ReportGeneration" hash-for-method="TC002_JsonDataGeneration">TC002_JsonDataGeneration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.ReportGeneration" hash-for-method="TC003_PDFDataGeneration">TC003_PDFDataGeneration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.ReportGeneration" hash-for-method="TC004_CommonDataGeneration">TC004_CommonDataGeneration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="VisualImageComparison">VisualImageComparison</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="fontType_BAU">fontType_BAU</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.VerizonTest.TestApplication2" hash-for-method="fontType_NAS">fontType_NAS</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestProj.UtilityApplication" hash-for-method="testExecutionflow">testExecutionflow</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestProj.ReportGeneration</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC005_ExcelDataValidation">
+                  </a> <!-- TC005_ExcelDataValidation -->
+                  <span class="method-name">TC005_ExcelDataValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at TestProj.ReportGeneration.TC005_ExcelDataValidation(ReportGeneration.java:176)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.VerizonTest.TestApplication2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ImageComparison_ThirdPage_BAU">
+                  </a> <!-- ImageComparison_ThirdPage_BAU -->
+                  <span class="method-name">ImageComparison_ThirdPage_BAU</span>
+                  <div class="stack-trace">com.pdfunit.errors.PDFUnitValidationException: Expected image &apos;C:\Users\u...ages_Extraction\purchaseReceipt_PDF_resource_2.png&apos; not found on specified page(s) [3] in &apos;C:\Users\u...est\resources\VerizonFiles\purchaseReceipt_PDF.pdf&apos;. Diff-image for mismatch: &apos;./purchaseReceipt_PDF.pdf.20200522-072621136.out.png&apos;.
+	at obfuscated.dz.b(SourceFile:95)
+	at com.pdfunit.validators.ImageValidator.matching(SourceFile:123)
+	at com.VerizonTest.TestApplication2.ImageComparison_ThirdPage_BAU(TestApplication2.java:221)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(validating verizon logo(present in 1st page) with the NSA pdf-- 3rd page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PageValidation_NSA">
+                  </a> <!-- PageValidation_NSA -->
+                  <span class="method-name">PageValidation_NSA</span>
+                  <div class="stack-trace">com.pdfunit.errors.PDFUnitValidationException: Unexpected number of pages in &apos;C:\Users\u...ers\user\Desktop\Generated\purchaseReceipt_PDF.pdf&apos;. Expected: 4, but was: 3.
+	at obfuscated.ct.b(SourceFile:52)
+	at com.pdfunit.validators.DocumentValidator.hasNumberOfPages(SourceFile:868)
+	at com.VerizonTest.TestApplication2.PageValidation_NSA(TestApplication2.java:53)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Validating the default pages present in the NAS - PDF)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RandomImageComparison">
+                  </a> <!-- RandomImageComparison -->
+                  <span class="method-name">RandomImageComparison</span>
+                  <div class="stack-trace">com.pdfunit.errors.PDFUnitValidationException: Expected image &apos;C:\Users\u...df-in-tests\images\exported-image_ant-logo-PNG.png&apos; not found on specified page(s) [1, 2, 3] in &apos;C:\Users\u...rizonFiles\3_Device upgrade single_Receipt (1).pdf&apos;. Diff-image for mismatch: &apos;./3_Device upgrade single_Receipt (1).pdf.20200522-072622490.out.png&apos;.
+	at obfuscated.dz.b(SourceFile:95)
+	at com.pdfunit.validators.ImageValidator.matching(SourceFile:123)
+	at com.VerizonTest.TestApplication2.RandomImageComparison(TestApplication2.java:233)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Random Image Comparison)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fontType_NegativeScenario">
+                  </a> <!-- fontType_NegativeScenario -->
+                  <span class="method-name">fontType_NegativeScenario</span>
+                  <div class="stack-trace">com.pdfunit.errors.PDFUnitValidationException: &apos;C:\Users\u...est\resources\VerizonFiles\purchaseReceipt_PDF.pdf&apos; does not contain a font with a name containing &apos;Arial&apos;.
+	at obfuscated.bs.b(SourceFile:59)
+	at com.pdfunit.validators.FontNameValidator.withNameContaining(SourceFile:46)
+	at com.VerizonTest.TestApplication2.fontType_NegativeScenario(TestApplication2.java:97)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Validates the negative scenario for either of the PDF schema)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestProj.ReportGeneration</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC001_JsonRequest_validation">
+                  </a> <!-- TC001_JsonRequest_validation -->
+                  <span class="method-name">TC001_JsonRequest_validation</span>
+                  <em>
+(Verify if the save button is enabled)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC002_JsonDataGeneration">
+                  </a> <!-- TC002_JsonDataGeneration -->
+                  <span class="method-name">TC002_JsonDataGeneration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC003_PDFDataGeneration">
+                  </a> <!-- TC003_PDFDataGeneration -->
+                  <span class="method-name">TC003_PDFDataGeneration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC004_CommonDataGeneration">
+                  </a> <!-- TC004_CommonDataGeneration -->
+                  <span class="method-name">TC004_CommonDataGeneration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestProj.UtilityApplication</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testExecutionflow">
+                  </a> <!-- testExecutionflow -->
+                  <span class="method-name">testExecutionflow</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.VerizonTest.TestApplication2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="BAU_FirstPageTextualValidations">
+                  </a> <!-- BAU_FirstPageTextualValidations -->
+                  <span class="method-name">BAU_FirstPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 1st Page of The BAU)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BAU_SecondPageTextualValidations">
+                  </a> <!-- BAU_SecondPageTextualValidations -->
+                  <span class="method-name">BAU_SecondPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 2nd Page of The BAU)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BAU_ThirdPageTextualValidations">
+                  </a> <!-- BAU_ThirdPageTextualValidations -->
+                  <span class="method-name">BAU_ThirdPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 3rd Page of The BAU)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ImageComparison_FirstPage_BAU">
+                  </a> <!-- ImageComparison_FirstPage_BAU -->
+                  <span class="method-name">ImageComparison_FirstPage_BAU</span>
+                  <em>
+(validating verizon logo with the NSA pdf-- 1st page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NSA_FirstPageTextualValidations">
+                  </a> <!-- NSA_FirstPageTextualValidations -->
+                  <span class="method-name">NSA_FirstPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 1st Page of The NSA)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NSA_SecondPageTextualValidations">
+                  </a> <!-- NSA_SecondPageTextualValidations -->
+                  <span class="method-name">NSA_SecondPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 2nd Page of The NSA)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NSA_ThirdPageTextualValidations">
+                  </a> <!-- NSA_ThirdPageTextualValidations -->
+                  <span class="method-name">NSA_ThirdPageTextualValidations</span>
+                  <em>
+(Validates the textual Characters present in the 3rd Page of The NSA)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PageValidation_BAU">
+                  </a> <!-- PageValidation_BAU -->
+                  <span class="method-name">PageValidation_BAU</span>
+                  <em>
+(Validating the default pages present in the BAU - PDF)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VisualImageComparison">
+                  </a> <!-- VisualImageComparison -->
+                  <span class="method-name">VisualImageComparison</span>
+                  <em>
+(visual comparison between the two pdfs)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fontType_BAU">
+                  </a> <!-- fontType_BAU -->
+                  <span class="method-name">fontType_BAU</span>
+                  <em>
+(Validates the default fonts present in the Schema Page for the BAU pdf)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fontType_NAS">
+                  </a> <!-- fontType_NAS -->
+                  <span class="method-name">fontType_NAS</span>
+                  <em>
+(Validates the default fonts present in the Schema Page for the NAS pdf)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\user\workspace\Test\UtilityApplication.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestProj.UtilityApplication&quot;/&gt;
+      &lt;class name=&quot;TestProj.ReportGeneration&quot;/&gt;
+      &lt;class name=&quot;com.VerizonTest.TestApplication2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (3 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'BAU_FirstPageTextualValidations')
+data.setCell(0, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(0, 3, 19661);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testExecutionflow')
+data.setCell(1, 2, 'TestProj.UtilityApplication')
+data.setCell(1, 3, 11842);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'VisualImageComparison')
+data.setCell(2, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(2, 3, 5039);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'NSA_SecondPageTextualValidations')
+data.setCell(3, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(3, 3, 541);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TC003_PDFDataGeneration')
+data.setCell(4, 2, 'TestProj.ReportGeneration')
+data.setCell(4, 3, 378);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'ImageComparison_FirstPage_BAU')
+data.setCell(5, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(5, 3, 354);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'NSA_FirstPageTextualValidations')
+data.setCell(6, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(6, 3, 293);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'RandomImageComparison')
+data.setCell(7, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(7, 3, 280);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TC004_CommonDataGeneration')
+data.setCell(8, 2, 'TestProj.ReportGeneration')
+data.setCell(8, 3, 278);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'BAU_SecondPageTextualValidations')
+data.setCell(9, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(9, 3, 259);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'BAU_ThirdPageTextualValidations')
+data.setCell(10, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(10, 3, 188);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'NSA_ThirdPageTextualValidations')
+data.setCell(11, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(11, 3, 166);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'ImageComparison_ThirdPage_BAU')
+data.setCell(12, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(12, 3, 121);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TC002_JsonDataGeneration')
+data.setCell(13, 2, 'TestProj.ReportGeneration')
+data.setCell(13, 3, 58);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TC005_ExcelDataValidation')
+data.setCell(14, 2, 'TestProj.ReportGeneration')
+data.setCell(14, 3, 38);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'fontType_BAU')
+data.setCell(15, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(15, 3, 26);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'fontType_NegativeScenario')
+data.setCell(16, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(16, 3, 18);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'fontType_NAS')
+data.setCell(17, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(17, 3, 14);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'PageValidation_NSA')
+data.setCell(18, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(18, 3, 11);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'PageValidation_BAU')
+data.setCell(19, 2, 'com.VerizonTest.TestApplication2')
+data.setCell(19, 3, 10);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'TC001_JsonRequest_validation')
+data.setCell(20, 2, 'TestProj.ReportGeneration')
+data.setCell(20, 3, 6);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestProj.ReportGeneration</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startReport</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestProj.UtilityApplication</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testExecutionflow</span>
+                <span class="method-start">479 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestProj.ReportGeneration</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC001_JsonRequest_validation</span>
+                <span class="method-start">12331 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=TC001_JsonRequest_validation status=SUCCESS method=ReportGeneration.TC001_JsonReque...)</span>
+                <span class="method-start">12339 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC002_JsonDataGeneration</span>
+                <span class="method-start">12345 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=TC002_JsonDataGeneration status=SUCCESS method=ReportGeneration.TC002_JsonDataGener...)</span>
+                <span class="method-start">12407 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC003_PDFDataGeneration</span>
+                <span class="method-start">12409 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=TC003_PDFDataGeneration status=SUCCESS method=ReportGeneration.TC003_PDFDataGenerat...)</span>
+                <span class="method-start">12792 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">TC004_CommonDataGeneration</span>
+                <span class="method-start">12794 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=TC004_CommonDataGeneration status=SUCCESS method=ReportGeneration.TC004_CommonDataG...)</span>
+                <span class="method-start">13076 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC005_ExcelDataValidation</span>
+                <span class="method-start">13077 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=TC005_ExcelDataValidation status=FAILURE method=ReportGeneration.TC005_ExcelDataVal...)</span>
+                <span class="method-start">13128 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.VerizonTest.TestApplication2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">BAU_FirstPageTextualValidations</span>
+                <span class="method-start">13137 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BAU_SecondPageTextualValidations</span>
+                <span class="method-start">32810 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BAU_ThirdPageTextualValidations</span>
+                <span class="method-start">33076 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ImageComparison_FirstPage_BAU</span>
+                <span class="method-start">33270 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ImageComparison_ThirdPage_BAU</span>
+                <span class="method-start">33625 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NSA_FirstPageTextualValidations</span>
+                <span class="method-start">33781 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NSA_SecondPageTextualValidations</span>
+                <span class="method-start">34082 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NSA_ThirdPageTextualValidations</span>
+                <span class="method-start">34640 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PageValidation_BAU</span>
+                <span class="method-start">34811 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">PageValidation_NSA</span>
+                <span class="method-start">34824 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RandomImageComparison</span>
+                <span class="method-start">34838 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VisualImageComparison</span>
+                <span class="method-start">35125 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fontType_BAU</span>
+                <span class="method-start">40166 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fontType_NAS</span>
+                <span class="method-start">40197 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">fontType_NegativeScenario</span>
+                <span class="method-start">40211 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestProj.ReportGeneration</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">endReport</span>
+                <span class="method-start">40233 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

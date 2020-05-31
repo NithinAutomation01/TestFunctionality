@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ========================================================================= -->
+<!--                                                                           -->   
+<!-- PDFUnit - Automated PDF Tests with Java                                   -->   
+<!--                                                                           -->   
+<!-- Copyright (C) 2016 PDFUnit.com                                            -->   
+<!--                                                                           -->   
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://pdfunit.com/en/licenseinfo.html               -->
+<!-- Manual_____________: http://pdfunit.com/en/download/index.html            -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<!-- Author: Carsten Siedentop                                                 -->
+<!-- Date:   August 2013                                                       -->
+<!-- ========================================================================= -->
+<installation xmlns="http://sourceforge.net/verify.installation.program" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://sourceforge.net/verify.installation.program  vip.xsd"
+              vipVersion="1.0.0"
+              language="Java"
+>
+
+  <comment>
+    Checking the installation of PDFUnit.
+  </comment>
+  
+  <application product="PDFUnit Demo" 
+               version="2016.05"
+  />
+
+  <javaRuntime version="1.7+"
+               comment="Any Java runtime above 1.7 is allowed"
+  />
+  
+  <classpath loadable="yes">
+    <class name="com.pdfunit.AssertThat"                                       comment="PDFUnit"/>
+
+    <class name="com.dumbster.smtp.SmtpServer"                                 comment="Dumbster 1.9.0.2"/>
+    <class name="com.google.zxing.Reader"                                      comment="ZXing, core"/>
+    <class name="com.google.zxing.client.j2se.ImageReader"                     comment="ZXing, javase"/>
+    <class name="java.lang.System"                                             comment="Java Runtime"/>
+    <class name="javax.mail.Message"                                           comment="Java Mail"/>
+    <class name="javax.xml.parsers.DocumentBuilderFactory"                     comment="XML, DOM-Parser"/>
+    <class name="javax.xml.parsers.SAXParserFactory"                           comment="XML, SAX Parser"/>
+    <class name="javax.xml.transform.TransformerFactory"                       comment="XML, XSLT Processor"/>
+    <class name="net.sourceforge.tess4j.Tesseract"                             comment="Tess4j"/>
+    <class name="org.apache.commons.collections4.MultiValuedMap"               comment="Apache Commons Collection"/>
+    <class name="org.apache.commons.logging.Log"                               comment="Apache Commons Logging"/>
+    <class name="org.apache.fontbox.afm.FontMetrics"                           comment="PDFBox, fontbox"/>
+    <class name="org.apache.pdfbox.pdmodel.font.encoding.MacOSRomanEncoding"   comment="PDFBox"/>
+    <class name="org.apache.pdfbox.preflight.PreflightDocument"                comment="PDFBox, preflight"/>
+    <class name="org.apache.poi.ss.usermodel.Workbook"                         comment="POI"/>
+    <class name="org.apache.xmlbeans.XmlObject"                                comment="Apache XMLBeans"/>
+    <class name="org.apache.xmpbox.XMPMetadata"                                comment="PDFBox, xmpbox"/>
+    <class name="org.aspectj.runtime.reflect.JoinPointImpl"                    comment="AspectJ"/>
+    <class name="org.bouncycastle.cert.X509CertificateHolder"                  comment="BouncyCastle"/>
+    <class name="org.dbunit.dataset.IDataSet"                                  comment="DBUnit"/>
+    <class name="org.hsqldb.jdbcDriver"                                        comment="DBUnit"/>
+    <class name="org.junit.Assert"                                             comment="JUnit"/>
+    <class name="org.openqa.selenium.htmlunit.HtmlUnitDriver"                  comment="HtmlUnit"/>
+    <class name="org.openqa.selenium.WebDriver"                                comment="Selenium"/>
+    <class name="org.openxmlformats.schemas.spreadsheetml.x2006.main.WorksheetDocument"   comment="POI XML Schema"/>
+ 
+    <file  name="pdfunit.config"                         canRead="yes" comment="Configuration file for PDFUnit." />
+    <file  name="messages.properties"                    canRead="yes" comment="English messages for PDFUnit." />
+    <file  name="messages_de.properties"                 canRead="yes" comment="German messages for PDFUnit." />
+  </classpath>
+  
+</installation>

@@ -1,0 +1,56 @@
+*****************************************************************************
+*                                                                           *
+* PDFUnit - Automated PDF Tests                                             *
+*                                                                           *
+* Copyright (C) 2016 PDFUnit.com                                            *
+*                                                                           *
+* This file is part of the commercial library PDFUnit.                      *
+*                                                                           *
+* Legal information__: http://pdfunit.com/en/licenseinfo.html               *
+* Manual_____________: http://pdfunit.com/en/download/index.html            *
+* Contact for license: license[at]pdfunit.com                               *
+*                                                                           *
+*****************************************************************************
+
+General Information:
+--------------------
+The software 'PDFUnit' is the copyrighted property of PDFUnit.com.
+This license gives you the permission, to evaluate PDFunit.
+The evaluation period ends after 90 days. During this time, the usage
+is free of charge.
+
+During the free evaluation period, you can ask questions here: info[at]pdfunit.com
+
+Permission for Commercial Use: 
+-------------------------------
+
+Anybody, who is using PDFUnit to test other software, which itself is used or intended
+to earn money, has to buy a license. The price will be individual, fair and depends 
+on the kind of usage of PDFUnit. Please contact license[at]pdfunit.com for information.
+
+For further information look at the home page:  "www.pdfunit.com"
+
+Liability:
+----------
+PDFUnit can be used 'AS IS' without warranty of any kind.
+When you think about the risk using PDFUnit, don't forget that it is a test tool.
+
+Individual license agreements may provide other warranty.
+
+Restrictions:
+-------------
+Any kind of reverse engineering is forbidden.
+You are not allowed, to distribute PDFUnit in any kind, not even 
+to companies in the same holding.
+
+Penalty Fee:
+------------
+When you are using PDFUnit in a commercial context without a valid license, you have 
+to pay a minimum penalty fee of 0.01 Euro for every PDF document, which leaves your 
+company during the period of usage. When your software is a service which does not 
+produce PDF documents itself, then the minimum penalty fee is 0.01 Euro for every 
+PDF document produced by those programs your service serves. 
+
+In addition, you take the legal fees.
+
+In case of any conflict german law is applied. Germany is the location of the court.

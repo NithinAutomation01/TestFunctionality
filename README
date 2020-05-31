@@ -1,0 +1,90 @@
+*****************************************************************************
+*                                                                           *
+* PDFUnit - Automated PDF Tests                                             *
+*                                                                           *
+* Copyright (C) 2016 PDFUnit.com                                            *
+*                                                                           *
+* This file is part of the commercial library PDFUnit.                      *
+*                                                                           *
+* Legal information__: http://pdfunit.com/en/licenseinfo.html               *
+* Manual_____________: http://pdfunit.com/en/download/index.html            *
+* Contact for license: license[at]pdfunit.com                               *
+*                                                                           *
+*****************************************************************************
+
+Description: 
+------------
+
+  This file gives some short information about the demo project for PDFUnit.
+
+  PDFUnit is a tool to verify visible and invisible content of PDF documents.
+  Also the layout can be validated. It provides a fluent API. 
+  Internally it uses the features of JUnit, iText and some other products.
+  
+
+Homepage: 
+---------
+  See www.pdfunit.com
+
+
+Installation of the demo project:
+---------------------------------
+  1. Extract the ZIP file containing this file into a folder.
+  2. Import the project into Eclipse, if you like.
+
+Running the existing tests:
+---------------------------
+  Some tests need a database access. Please start the database with
+  the script 'startDemodb.bat' or 'startDemodb.sh'. 
+  The scripts are located in the root of the project, the 
+  database is located in the directory ./dbdata
+  
+  You can start the tests inside Eclipse or in a shell
+    >ant test
+    >mvn test
+    >mvn site
+  
+  When you have started the tests, you will see the message
+  'No license key found. Switching to evaluation mode.'
+  'Contact PDFUnit.com if you are interested in a license.'
+  on the console. 
+  At the same time a small window with a math question opens.
+  It may be that this window lays behind other application windows.
+  So please search for that and answer the question.
+
+  The number of tests in the evaluation mode is limited to 50 tests.
+
+License:
+--------
+  You can evaluate PDFUnit as long as you want, but PDFUnit is
+  a commercial product. So during the evaluation you have to answer 
+  a little math question when running PDFUnit. If you have a
+  license key file that question will not appear.
+    
+  When you give a wrong answer to the math question, all tests end with
+  the exception 'com.pdfunit.internal.errors.PDFUnitLicenseError' 
+
+  You can ask for a license:  license[at]pdfunit.com
+
+Configuration:
+--------------    
+  The libraries of PDFUnit are located in the directory lib/pdfunit-<version>.
+  This folder is named PDFUNIT_HOME in the following text.
+  The libraries of third party libraries used by PDFUnit are located under 
+  $PDFUNIT_HOME/lib/..
+
+  PDFUnit comes with one config file: 'pdfunit.config'.
+  See the manual (./docs/pdfunit-<version>_manual_<language>.pdf) for its usage.
+  
+  When the config file could not be found in the CLASSPATH, all
+  tests end with 'junit.framework.AssertionFailedError'.  
+    
+Technical Infos:
+----------------
+  The project was developed with Eclipse.
+  Java 1.7+ is required.
+  PDFUnit runs under Windows and Linux and many JDK's.
+
+Feedback:
+---------
+  info[at]pdfunit.com

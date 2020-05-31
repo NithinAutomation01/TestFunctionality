@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- VIP - Verify Installation Program                                         -->
+<!--                                                                           -->
+<!-- Copyright (C) 2013 www.verify-installation.org                            -->
+<!--                                                                           -->
+<!-- This file is part of the OpenSource Project VIP                           -->
+<!--                                                                           -->
+<!-- Documentation_________: http://verify-installation.org/howto/             -->
+<!-- Contact_______________: info@verify-installation.org                      -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          targetNamespace="http://sourceforge.net/verify.installation.program" 
+          xmlns:vip="http://sourceforge.net/verify.installation.program" 
+          elementFormDefault="qualified"
+>
+  <!-- ========================================================================
+    Document root:
+  ========================================================================= -->
+
+  <xs:element name="installation"  type="vip:installation_Type" />
+  
+  <!-- ========================================================================
+    Complex types:
+  ========================================================================= -->
+
+  <xs:complexType name="application_Type">
+    <xs:attribute name="product" type="vip:product_Type"  use="required" />
+    <xs:attribute name="version" type="vip:string50_Type" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="class_Type">
+    <xs:attribute name="name"    type="vip:string400_Type" use="required" />
+    <xs:attribute name="comment" type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="classpath_Type">
+    <xs:sequence>
+      <xs:element name="class" type="vip:class_Type" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="file"  type="vip:file_Type"  minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="loadable" fixed="yes" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="executable_Type">
+    <xs:attribute name="name"    type="vip:string400_Type" use="required"/>
+    <xs:attribute name="os"      type="vip:string50_Type"  use="optional"/>
+    <xs:attribute name="comment" type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="executables_Type">
+    <xs:sequence>
+      <xs:element name="executable" type="vip:executable_Type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="accessable" fixed="yes" use="optional"/>
+  </xs:complexType>
+  
+  <xs:complexType name="fileProperties_Type">
+    <xs:sequence>
+      <xs:element name="property" type="vip:fileProperty_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fileProperty_Type">
+    <xs:attributeGroup ref="vip:propertyAttribute_Group" />
+    <xs:attribute name="file" type="vip:string400_Type" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="file_Type">
+    <xs:attributeGroup ref="vip:folderAttributes_Group" />
+    <xs:attribute name="canExecute" type="vip:boolean_Type"   use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="files_Type">
+    <xs:sequence>
+      <xs:element name="file" type="vip:file_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="folder_Type">
+    <xs:attributeGroup ref="vip:folderAttributes_Group" />
+  </xs:complexType>
+  
+  <xs:complexType name="folders_Type">
+    <xs:sequence>
+      <xs:element name="folder" type="vip:folder_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="installation_Type">
+    <xs:all>
+      <xs:element name="comment"          type="vip:string400_Type"        minOccurs="0" maxOccurs="1" />
+      <xs:element name="application"      type="vip:application_Type"      minOccurs="1" maxOccurs="1" />
+      <xs:element name="os"               type="vip:os_Type"               minOccurs="0" maxOccurs="1" />
+      <xs:element name="javaRuntime"      type="vip:javaRuntime_Type"      minOccurs="0" maxOccurs="1" />
+      <xs:element name="classpath"        type="vip:classpath_Type"        minOccurs="0" maxOccurs="1"  />
+      <xs:element name="folders"          type="vip:folders_Type"          minOccurs="0" maxOccurs="1" />
+      <xs:element name="files"            type="vip:files_Type"            minOccurs="0" maxOccurs="1" />
+      <xs:element name="urls"             type="vip:urls_Type"             minOccurs="0" maxOccurs="1" />
+      <xs:element name="libraries"        type="vip:libraries_Type"        minOccurs="0" maxOccurs="1" />
+      <xs:element name="executables"      type="vip:executables_Type"      minOccurs="0" maxOccurs="1" />
+      <xs:element name="systemProperties" type="vip:systemProperties_Type" minOccurs="0" maxOccurs="1" />
+      <xs:element name="fileProperties"   type="vip:fileProperties_Type"   minOccurs="0" maxOccurs="1" />
+    </xs:all>
+    <xs:attribute name="vipVersion" type="vip:vipVersion_Type" use="required"/>
+    <xs:attribute name="language"   fixed="Java"               use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="javaRuntime_Type">
+    <xs:attribute name="version"    type="vip:string400_Type" use="required" />
+    <xs:attribute name="bitSystem"  type="vip:bitSystem_Type" use="optional" />
+    <xs:attribute name="comment"    type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="libraries_Type">
+    <xs:sequence>
+      <xs:element name="library"     type="vip:library_Type" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="existInPath" fixed="yes" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="library_Type" >
+    <xs:attribute name="name"      type="vip:string200_Type" use="required" />
+    <xs:attribute name="comment"   type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="os_Type">
+    <xs:attribute name="name"      type="vip:osName_Type"     use="required" />
+    <xs:attribute name="bitSystem" type="vip:bitSystem_Type"  use="optional" />
+    <xs:attribute name="versions"  type="vip:string400_Type"  use="optional" />
+    <xs:attribute name="comment"   type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="systemProperties_Type">
+    <xs:sequence>
+      <xs:element name="property" type="vip:systemProperty_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="available" fixed="yes" />
+  </xs:complexType>
+
+  <xs:complexType name="systemProperty_Type">
+    <xs:attributeGroup ref="vip:propertyAttribute_Group" />
+  </xs:complexType>
+  
+  <xs:complexType name="url_Type">
+    <xs:attribute name="location" type="vip:string400_Type" use="required" />
+    <xs:attribute name="comment"  type="vip:string100_Type" use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="urls_Type">
+    <xs:sequence>
+      <xs:element name="url" type="vip:url_Type" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="canRead" fixed="yes" use="optional"/>
+  </xs:complexType>
+  
+  <!-- ========================================================================
+    Simple types:
+  ========================================================================= -->
+
+  <xs:simpleType name="bitSystem_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="32" />
+      <xs:enumeration value="64" />
+      <xs:enumeration value="x86" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="boolean_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes" />
+      <xs:enumeration value="no" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="vipVersion_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1.0.0" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="product_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="osName_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AIX" />
+      <xs:enumeration value="FreeBSD" />
+      <xs:enumeration value="HP UX" />
+      <xs:enumeration value="Irix" />
+      <xs:enumeration value="Linux" />
+      <xs:enumeration value="Mac OS" />
+      <xs:enumeration value="Mac OS X" />
+      <xs:enumeration value="MPE/iX" />
+      <xs:enumeration value="Netware" />
+      <xs:enumeration value="Solaris" />
+      <xs:enumeration value="SunOS" />
+      <xs:enumeration value="Unix" />
+      <xs:enumeration value="Windows" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="string50_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="string100_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="string200_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="200" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="string400_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="400" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- ========================================================================
+    Attribute groups:
+  ========================================================================= -->
+
+  <xs:attributeGroup name="folderAttributes_Group">
+    <xs:attribute name="name"     type="vip:string400_Type" use="required" />
+    <xs:attribute name="comment"  type="vip:string100_Type" use="optional" />
+    <xs:attribute name="canRead"  type="vip:boolean_Type"   use="optional" />
+    <xs:attribute name="canWrite" type="vip:boolean_Type"   use="optional" />
+  </xs:attributeGroup>
+  
+  <xs:attributeGroup name="propertyAttribute_Group">
+    <xs:attribute name="key"      type="vip:string200_Type" use="required" />
+    <xs:attribute name="expected" type="vip:string200_Type" use="optional" />
+    <xs:attribute name="comment"  type="vip:string100_Type" use="optional" />
+  </xs:attributeGroup>  
+  
+</xs:schema>

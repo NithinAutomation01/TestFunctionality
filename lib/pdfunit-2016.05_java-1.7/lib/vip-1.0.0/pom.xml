@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- VIP - Verify Installation Program                                         -->
+<!--                                                                           -->
+<!-- Copyright (C) 2013 www.verify-installation.org                            -->
+<!--                                                                           -->
+<!-- This file is part of the OpenSource Project VIP                           -->
+<!--                                                                           -->
+<!-- Documentation_________: http://verify-installation.org/howto/             -->
+<!-- Contact_______________: info@verify-installation.org                      -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.verifyinstallation</groupId>
+  <artifactId>vip</artifactId>
+  <version>1.0.0</version>
+
+  <packaging>jar</packaging>
+  <name>Verify Installation Program</name>
+
+  <description>
+    The "Verify Installation Program" (VIP) checks some 
+    configuration dependencies after an installation to make sure 
+    that the installed program will be run without problem.
+    
+    VIP is available for Java, .NET, Perl, JavaScript, Python, ...
+    and can be integrated into many environments:
+    Eclipse, ANT, Maven, Windows-Shell, Linux-Shell, Firefox, ...
+  </description>
+  <url>http://verify-installation.org/</url>
+
+  <licenses>
+    <license>
+      <name>TODO</name>
+      <url>http://www.todo/license/</url>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <id>csi</id>
+      <email>c.siedentop &lt;at&gt; pdfunit.com</email>
+      <name>Carsten Siedentop</name>
+      <organization>PDFUnit.com</organization>
+      <organizationUrl>http://www.pdfunit.com/</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.reporting.outputDirectory>target/site</project.reporting.outputDirectory>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <maven.test.error.ignore>true</maven.test.error.ignore>
+    <compileSource>1.6</compileSource>
+    <targetJdk>1.6</targetJdk>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>xalan</groupId>
+      <artifactId>xalan</artifactId>
+      <version>2.7.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>2.6</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <!--
+          This plugin runs the javax.tools compiler from version 3.0 if available. 
+          That results in a different byte-code between site lifecycle and 
+          default lifecycle. Version 2.5.1 uses the javac compiler every time.
+          <version>2.5.1</version>
+          Version 3.0 has a bug.
+        -->
+        <version>3.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-javadoc-plugin</artifactId>
+         <version>2.9</version>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+          <includes>
+            <include>**/*Test*.java</include>
+          </includes>
+          <excludes>
+            <exclude>**/AbstractTest.java</exclude>
+            <exclude>**/package-info.java</exclude>
+            <exclude>**/*Test$*.java</exclude>
+          </excludes>
+
+          <!-- 
+            'methods' for parallel is not the fastest way to test, 
+            but it is the best, to detect non-threadsafe code.
+          -->
+          <parallel>methods</parallel>
+          <forkMode>perthread</forkMode>
+          <threadCount>2</threadCount>
+          <perCoreThreadCount>true</perCoreThreadCount>
+          <!-- 
+            This configuration lets surefire create a file:
+            target\surefire-reports\<classname>-output.txt
+           -->
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+        </configuration>
+      </plugin>
+
+      <!--  
+        The configuration of the cobertura plugin must set here,
+        not in the reporting section. 
+        
+        Maven cobertura plugin does not respect exclude tags for report generation. 
+        This is a known bug reported here: http://jira.codehaus.org/browse/MCOBERTURA-52.
+        
+        The "ignores" must contain dots, and the "excludes" - slashes. 
+       -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.5.2</version>
+        <configuration>
+          <formats>
+            <format>html</format>
+            <format>xml</format>
+          </formats>
+          <instrumentation>
+            <excludes>
+              <exclude>**/*Test*.class</exclude>
+              <exclude>**/*Main.class</exclude>
+              <exclude>**/package-info.class</exclude>
+            </excludes>
+          </instrumentation>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.nuiton</groupId>
+        <artifactId>maven-license-plugin</artifactId>
+        <version>3.0</version>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>2.3</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jdepend-maven-plugin</artifactId>
+        <version>2.0-beta-2</version>
+      </plugin>
+
+      <plugin>
+        <!-- ==================================================================== -->
+        <!--    To let PMD generate the report in english language, set the       -->
+        <!--    environment variable to this:  _JAVA_OPTIONS=-Duser.language=en   -->
+        <!-- ==================================================================== -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>2.7.1</version>
+        <configuration>
+          <aggregate>false</aggregate>
+          <failOnViolation>false</failOnViolation>
+          <format>html</format>
+          <includeTests>true</includeTests>
+          <linkXRef>true</linkXRef>
+          <minimumTokens>100</minimumTokens>
+          <outputEncoding>UTF-8</outputEncoding>
+          <sourceEncoding>UTF-8</sourceEncoding>
+          <targetjdk>${compileSource}</targetjdk>
+          <exludes>
+            <exclude>**/*Tests.java</exclude>
+          </exludes>
+          <excludeRoots>
+            <excludeRoot>${basedir}/src/test</excludeRoot>
+            <excludeRoot>${basedir}/src/demo</excludeRoot>
+          </excludeRoots>
+          <rulesets>
+            <ruleset>${basedir}/etc/analyzer/pmd/pmdRuleset_for-all-projects.xml</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <!-- 
+          The maven-checkstyle plugin generates a report for the hard coded (?) version
+          2.6. When configuring here an other version, then a second report will be 
+          generated.
+         -->
+<!--         <version>2.9.1</version> -->
+        <version>2.6</version>
+        <configuration>
+          <propertiesLocation>${basedir}/etc/analyzer/checkstyle/checkstyle_all-projects_customized.properties</propertiesLocation>
+          <configLocation>${basedir}/etc/analyzer/checkstyle/checkstyle_customized-for-vip.xml</configLocation>
+          <enableRulesSummary>true</enableRulesSummary>
+          <enableSeveritySummary>true</enableSeveritySummary>
+          <!-- This format can not be written as nested tags :-( -->
+          <sourceDirectory>src/main/java</sourceDirectory>
+          <linkXRef>true</linkXRef>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.12.4</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- This avoids duplicate execution of the tests: -->
+              <report>report-only</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.5.2</version>
+      </plugin>
+          
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>taglist-maven-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <tagListOptions>
+            <tagClasses>
+              <tagClass>
+                <displayName>Outstanding fixes</displayName>
+                <tags>
+                  <tag>
+                    <matchString>FIXME</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+              <tagClass>
+                <displayName>Markers für TODO's</displayName>
+                <tags>
+                  <tag>
+                    <matchString>TODO</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                  <tag>
+                    <matchString>XXX</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+              <tagClass>
+                <displayName>Marker for refactoring</displayName>
+                <tags>
+                  <tag>
+                    <matchString>REFACTOR</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+            </tagClasses>
+          </tagListOptions>
+          <linkXRef>true</linkXRef>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry kind="src" path="lib/pdfunit-2016.05_java-1.7"/>
+	<classpathentry kind="lib" path="lib/dumbster_fork-1.9.0.2/dumbster-1.9.0.2-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/commons-collections4-4.1/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/junit-4.12/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/fontbox-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/pdfbox-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/preflight-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/xmpbox-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/poi-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/vip-1.0.0/vip-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/zxing-core-3.2.1/core-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/zxing-core-3.2.1/javase-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/pdfunit-java-2016.05.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/pdfunit-java_demos/lib/pdfunit-2016.05_java-1.7/pdfunit-java-2016.05_javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="pdfutil.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/bouncycastle-jdk15on-153/bcmail-jdk15on-1.53.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/bouncycastle-jdk15on-153/bcpkix-jdk15on-1.53.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/bouncycastle-jdk15on-153/bcprov-jdk15on-1.53.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/aspectj-1.8.7/aspectjrt-1.8.7.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/selenium-java-2.52.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-htmlunit-driver-2.52.0/selenium-htmlunit-driver-2.52.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/htmlunit-2.21.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/commons-el-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/htmlunit-core-js-2.17.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jasper-runtime-5.5.15.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-continuation-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-http-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-jmx-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-security-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-server-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-servlet-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jetty-servlets-9.2.13.v20150730.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/jsp-api-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/nekohtml-1.9.22.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-2.52.0/libs/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/cssparser-0.9.18.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/jetty-io-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/jetty-util-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/neko-htmlunit-2.21.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/websocket-api-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/websocket-client-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="lib/htmlunit-2.21/lib/websocket-common-9.2.15.v20160210.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/ooxml-lib/curvesapi-1.03.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax-mail-api-1.5.5/javax.mail-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/com-sun-javax-mail-1.5.5/javax.mail-1.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/hsqldb-2.3.4/hsqldb.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.5.2/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.5.2/dbunit-2.5.2.jar" sourcepath="C:/Users/user1/.m2/repository/org/dbunit/dbunit/2.5.2/dbunit-2.5.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/dbunit-2.5.2/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/tess4j-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/commons-beanutils-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/ghost4j-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/jai-imageio-core-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/jna-4.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/jul-to-slf4j-1.7.19.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/lept4j-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/logback-classic-1.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/logback-core-1.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/rococoa-core-0.5.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/slf4j-api-1.7.19.jar"/>
+	<classpathentry kind="lib" path="lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/xmlgraphics-commons-1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/config-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/fontbox-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/logback-classic-1.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/logback-core-1.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/pdfbox-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/pdfcompare-1.1.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (10)/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (11)/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (9)/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (9)/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (9)/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/groovy-2.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/groovy-json-2.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/groovy-xml-2.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/httpmime-4.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/json-path-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/rest-assured-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/rest-assured-common-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (14)/xml-path-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-annotations-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-core-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (6)/jackson-databind-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (8)/accessors-smart-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (8)/asm-5.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (8)/json-path-2.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (8)/json-smart-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Downloads/jar_files (8)/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/freemarker-2.3.23.jar"/>
+	<classpathentry kind="output" path="build_eclipse"/>
+</classpath>

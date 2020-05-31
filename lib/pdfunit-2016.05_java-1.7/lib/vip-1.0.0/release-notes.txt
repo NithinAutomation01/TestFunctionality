@@ -1,0 +1,56 @@
+*****************************************************************************
+*                                                                           *
+* VIP - Verify Installation Program                                         *
+*                                                                           *
+* Copyright (C) 2013 www.verify-installation.org                            *
+*                                                                           *
+* This file is part of the OpenSource Project VIP                           *
+*                                                                           *
+* Documentation_________: http://verify-installation.org/howto/             *
+* Contact_______________: info@verify-installation.org                      *
+*                                                                           *
+*****************************************************************************
+
+GENERAL INFORMATION
+===================
+
+VIP is a tool to validate the installation of any program.
+There are no requirements to other libraries.
+ 
+
+FEEDBACK
+========
+
+Please send feedback about problems, bugs, typing errors, 
+whishes for new features or anything else to:
+    
+    info@TODO
+
+
+RELEASE 1.0.0
+=======================================================================
+Date: 2013-10-10
+
+New features:
+-------------
+
+ Validating for:
+ - libraries in system path
+ - classes in class path
+ - files in class path
+ - operating system
+ - Java runtime data
+ - existence and permission of files and folders
+ - loadability of native libraries
+ - existence of URLs
+ - existence of executables
+ - system properties
+ - Existence and values of keys in property files
+
+Fixes:
+------
+ - no fix, initial release
+
+Refactoring:
+------------
+ - no refactoring, initial release

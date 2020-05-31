@@ -1,0 +1,23 @@
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- PDFUnit - Automated PDF Tests                                             -->
+<!--                                                                           -->
+<!-- Copyright (C) 2015 PDFUnit.com                                            -->
+<!--                                                                           -->
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://www.pdfunit.com/en/licensing.html             -->
+<!-- Manual_____________: http://pdfunit.com/en/documentation/                 -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<!-- Author: Carsten Siedentop                                                 -->
+<!-- ========================================================================= -->
+<!ELEMENT dataset (blob_table*)>
+
+<!ELEMENT blob_table EMPTY>
+<!ATTLIST blob_table
+    userID CDATA #REQUIRED
+    blob_column CDATA #IMPLIED
+>
+

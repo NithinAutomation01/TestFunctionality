@@ -1,0 +1,302 @@
+*****************************************************************************
+*                                                                           *
+* PDFUnit - Automated PDF Tests                                             *
+*                                                                           *
+* Copyright (C) 2016 PDFUnit.com                                            *
+*                                                                           *
+* This file is part of the commercial library PDFUnit.                      *
+*                                                                           *
+* Legal information__: http://pdfunit.com/en/licenseinfo.html               *
+* Manual_____________: http://pdfunit.com/en/download/index.html            *
+* Contact for license: license[at]pdfunit.com                               *
+*                                                                           *
+*****************************************************************************
+
+GENERAL INFORMATION about PDFUnit
+=================================
+
+PDFUnit is a tool to verify visible and invisible content of PDF documents.
+The layout of a PDF document can also be validated.
+  
+Internally it uses the following tools at runtime:
+ - Apache POI          (https://poi.apache.org/)
+ - AspectJ             (http://eclipse.org/aspectj/)
+ - Bouncycastle        (http://www.bouncycastle.org/)
+ - Commons Collections (http://commons.apache.org/proper/commons-collections/)
+ - JUnit               (http://junit.org/junit4/)
+ - PDFBox 2.0          (https://pdfbox.apache.org/)
+ - Tess4J              (http://tess4j.sourceforge.net/)
+ - ZXing               (https://github.com/zxing/zxing)
+
+FEEDBACK
+========
+
+Please send feedback about problems, bugs, typing errors, 
+whishes for new features or anything else to:
+    
+    feedback[at]pdfunit.com
+
+
+RELEASE 2016.05
+=======================================================================
+Date: 2016-05-05
+
+New features:
+-------------
+ - Validating bar code inside PDF
+ - Validating QR code inside PDF
+ - Validating text of images using OCR
+ - Validating text and bar codes that are part of a bigger image
+ - Introduced new format unit PIXELS, which is identical to POINTS
+ - New instantiation methods for PageRegion
+ - All PDF documents in a folder can be validated
+ - Introduced new filter methods:
+   .restrictedTo(page)
+   .restrictedTo(region)
+   .filteredBy(filename)
+   .withTextInRegion(imageRegion)
+ - PDF documents can be validated against constraints 
+   that are defined in Excel sheets.
+ - Validating the content of ZUGFeRD data
+ - Validating PDF against DIN 5008 standard
+ - Validating PDF/A-1a and PDF/A-1b
+ - German error messages
+ - PDFUnit runs with Java 1.8.
+
+Fixes:
+------
+ - Fixed bugs that are detected by unittests.
+ 
+Refactoring:
+------------
+ - Deleted deprecated class PDFUnitError. Use PDFUnitValidationException instead.
+ - Deleted deprecated methods haveSameContent(..). Use hasSameText(..) instead.
+ - Deleted deprecated methods hasContent(..). Use hasText(..) instead.
+ - The error messages are improved. They provide more information.
+ - Removed XMLUnit library
+ - Removed iText library
+ - Removed JPedal library
+ - Values of document sizes and regions changed from double to int.
+   Also FormatUnit.INCH and FormatUnit.CENTIMETER has been dropped.
+ - Deleted methods which were deprecated in the previous release
+ - Renamed some public methods to let the API better flow.
+   The former methods remain but were marked as deprecated.
+ - Renamed classes to let the API better flow.
+   Old classes were marked as deprecated.
+ - Added a helpful Javadoc comment to all deprecated methods
+ - Changed name of config file from 'config.properties' to 'pdfunit.config'.
+   The old name is still supported.
+ - PDF documents, loaded from a byte-array or an intput stream, will 
+   no longer be written to a tmp file on the disk.
+ - Renamed ComparePermission.java into AccessPermission.java
+
+RELEASE 2015.10
+=======================================================================
+Date: 2015-10-27
+
+The release 2015.10 needs Java 1.7+.
+A new product 'PDFUnit-Monitor' was created, see separate documentation.
+The class PDFUnitError.java is marked as deprecated. 
+It will be deleted in the next release.
+Use PDFUnitValidationException.java instead.
+
+New features:
+-------------
+ - PDFUnit-Monitor, a user interface for non-developers
+ - The location of the license key file can be set by a system property
+ - Added format unit to methods of 'RenderedPage.java'
+ - New constant: ON_EACH_PAGE
+ - New page ranges: 'spanningFrom(..).to(..)'. Now text can be validated 
+   over page boundaries.
+ - New test method: .document(..).containsOneImageOf(BufferedImage[])
+ - New test method: Checking text with 'containing()' over more than one page
+ - New test method: hasNoText()
+ - PDF-documents can be of type java.io.File
+ - New test method: AssertThat.eachDocument(fileNames)
+ - Raised maximum number of tests to 50 when running in evaluation mode
+
+Fixes:
+------
+ - UTF-8 bug fixed
+ - Comparison between 2 PDF documents can be done with whitespace processing
+
+Refactoring:
+------------
+ - Set class 'PDFUnitError' to deprecated, use 'PDFUnitValidationException' instead
+ - Set methods 'hasContent(..)' to deprecated, use 'hasText(..)' instead
+ - Set methods 'haveSameContent(..)' to deprecated, use 'haveSameText(..)' instead
+ - Renamed ContentValidator into TextValidator
+ - Continuously small refactoring due to PMD and Checkstyle rules
+ - Changed API, renamed 'withoutTextOverflow' into 'allWithoutTextOverflow' 
+ - Changed API, renamed 'withoutDuplicateNames' into 'allWithoutDuplicateNames'
+ - An accounting file is not anymore supported
+ - The name of a diff image file is added to a failure message
+ 
+
+RELEASE 2014.06
+=======================================================================
+Date: 2014-06-07
+
+New features:
+-------------
+ - New kind auf diff-image created
+ - Many small enhancements
+ - Better error messages
+
+Fixes:
+------
+ - Internal bug fixes
+
+Refactoring:
+------------
+ - Replaced PDF-Renderer by JPedal
+ - Continuously small refactoring due to PMD and Checkstyle rules
+ - Updating versions of third party libraries
+
+
+RELEASE 2013.01
+=======================================================================
+Date: 2013-01-01
+
+New features:
+-------------
+
+ Validating for:
+ - many tests about signatures and certificates
+ - more tests about formular fields
+ - images on individual pages
+ - text fits in form fields
+
+ When comparing 2 PDF documents, a diff image is generated in case of error
+ 
+ Some tests can be done with XPath. The information that needs to be tested, 
+ can be extracted as an XML file by separate utility programs:
+ - Bookmarks
+ - NamedDestinations
+ - Formular fields
+ - Font information
+ - Signature data
+ - XFA data (available since 2012.07)
+ - XMP data (available since 2012.07)
+ 
+ Conformance test to PDF standards (tests are not finished) for:
+ - PDF/X-1, PDF/X-4, PDF/X, PDF/A-1A, PDF/A-1B, PDF/A-2U
+
+Fixes:
+------
+ - Internal bug fixes
+
+Refactoring:
+------------
+ - Smaller refactorings
+ - PDFUnit is made threadsafe
+ - Cleaning up with respect to PMD and Checkstyle rules
+ - Updating versions of third party libraries
+
+
+RELEASE 2012.07
+=======================================================================
+Date: 2012-07-26
+
+New features:
+-------------
+ PDF documents can be instantiated from:
+ - File, Stream, URL and ByteArray
+ 
+ Validating for:
+ - text on individual pages in different ways (start, end, matching, ...)
+ - text in individual pages inside a given area of the page
+ - images on individual pages
+ - images independant of pages
+ - acrofields with names, values and attributes
+ - embedded files inside PDF
+ - internal document properties (author, title, keywords, creator ...)
+ - customer properties in PDF
+ - language of a document
+ - creation-date and modification-date with datespecific tests, 
+   like before and after
+ - user- and owner-passwords of encrypted PDF documents
+ - length of encryption key 
+ - fast web view (with a high probability, see detailed documentation)
+ - fontnames, fonttypes
+ - PDF page format, also for documents with different format on individual pages
+ - javascript in PDF
+ - existence and names of layers/OCG
+   (testing content on a layer is scheduled for future releases) 
+ - number of pages
+ - permissions (printing, copying, filling fields, ...)
+ - PDF document has trapping infos
+ - PDF-version
+ - bookmarks with labelname and destination
+ 
+ Test about various actions in a PDF can be done:
+ - Actions for Document open, close, save, print
+ - GotoLocal actions with destination and/or pagenumber 
+ - GotoRemote actions with remote file and destination or pagenumber
+ - JavaScript actions with various kinds of matching
+ - Launch actions with application and operation
+ - Named actions with destination name and label
+ - URI actions
+ 
+ Conformance tests to PDF standards (tests are not finished) for:
+ - PDF/A-1A
+ - PDF/A-1B
+ - PDF/X-3
+ 
+ XFA data can be tested:
+ - matching an XPath expression
+ - have the same content, as a given text file
+ 
+ XMP data can be tested:
+ - matching an XPath expression
+ - have the same content, as a given text file
+ 
+ Comparing PDF pages against a rendered image to validate the layout.
+ Comparing parts of a PDF page against a rendered image that matches that part.
+
+ Comparing a test PDF against a master PDF having the same:
+ - actions
+ - bookmarks
+ - document properties (author, subject, keywords, title, ...)
+ - embedded files
+ - acro fields
+ - fonts
+ - page format
+ - images 
+ - permissions
+ - page layout as rendered page
+ - content on specified pages
+ - XFA data
+ - XMP data
+
+ All tests can be done on PDF documents which have a user- or owner-password.
+ All tests can be done with PDF documents containing Unicode.
+
+
+Fixes:
+------
+ - none
+
+Refactoring:
+------------
+ - The API has been changed, to be more consistent 
+ - The internal structure changed, to allow better maintenance of the code
+ - iText is used internally, PDFBox has been dropped
+
+
+RELEASE 1.0:
+=======================================================================
+Date: 2010-08-01
+
+New features:
+-------------
+ - Customer specific functions for testing pdf with a fluent API
+   based on PDFBox.
+
+Fixes:
+------
+ - none
+
+
+END
+===

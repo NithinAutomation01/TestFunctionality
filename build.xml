@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- PDFUnit - Automated PDF Tests                                             -->
+<!--                                                                           -->
+<!-- Copyright (C) 2016 PDFUnit.com                                            -->
+<!--                                                                           -->
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://pdfunit.com/en/licenseinfo.html               -->
+<!-- Manual_____________: http://pdfunit.com/en/download/index.html            -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<!-- Author: Carsten Siedentop                                                 -->
+<!-- Date:   August 2013                                                       -->
+<!-- ========================================================================= -->
+<project name="PDFUnit demos"
+         default="test"
+         basedir="."
+>
+
+  <!-- ==================================================================== -->
+  <!-- All properties are externalized:                                     -->
+  <!-- ==================================================================== -->
+  
+  <xmlproperty file="build.properties.xml"
+               keepRoot="no"
+               collapseAttributes="yes"
+               semanticAttributes="true"
+  />
+
+  <!-- =================================================================== -->
+  <!-- Internal properties                                                 -->
+  <!-- =================================================================== -->
+
+  <!-- =================================================================== -->
+  <!-- Fileset declarations                                                -->
+  <!-- =================================================================== -->
+
+  <!-- Files for unittest with JUnit -->
+  <fileset id="junit.files" dir="${dir.source.test}" >
+    <include name="**/*Test*.java"/>
+    <include name="**/*Verif*.java"/>
+    <include name="**/FluentSyntaxDemo.java"/>
+    <!-- If there are internal classes, don't use them -->
+    <exclude name="**/*Test$*.java" />
+    <exclude name="**/*Abstract*.java" />
+  </fileset>
+
+  <!-- Files for <junitreport> -->
+  <fileset id="junitreport.files" dir="${dir.build.unittest.data}">
+    <include name="TEST-*.xml"/>
+  </fileset>
+
+  <!-- =================================================================== -->
+  <!-- Path declarations                                                   -->
+  <!-- =================================================================== -->
+
+  <!-- If there are problems with multiple jars, use more detailed filesets -->
+  <path id="project.classpath">
+    <pathelement location="${dir.external.tools.pdfunit-java-release}"/>
+    <pathelement location="${dir.source.test.resources}"/>
+    <pathelement location="${dir.build.classes}"/>
+    <fileset dir="${dir.external.tools}">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <!-- ==================================================================== -->
+  <!-- Entry point for build automation                                     -->
+  <!-- ==================================================================== -->
+  <target name="all"
+          depends=" compile
+                   ,test
+                   ,javadoc
+                   "
+          description="--> run all targets"
+  />
+
+  <!-- ================================================================= -->
+  <!-- Remove all generated (compiled) class files.                      -->
+  <!-- ================================================================= -->
+  <target name="clean"
+          depends=""
+          description="--> remove all generated files"
+  >
+    <delete quiet="yes">
+      <fileset dir="${dir.source}">
+        <include name="**/*.class"/>
+      </fileset>
+      <fileset dir=".">
+        <include name="**/*.bak"/>
+      </fileset>
+    </delete>
+    <delete dir="${dir.build}/" quiet="Yes" />
+    <mkdir  dir="${dir.build}" />
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Compile all sources.                                                -->
+  <!-- =================================================================== -->
+  <target name="compile"
+          depends="compile.main, compile.test"
+          description="--> compile the all java sources"
+  />
+
+  <!-- =================================================================== -->
+  <!-- Compile all productive sources.                                     -->
+  <!-- =================================================================== -->
+  <target name="compile.main"
+          depends=""
+          description="--> compile the production java sources"
+  >
+    <delete dir="${dir.build.classes}" quiet="Yes" />
+    <mkdir dir="${dir.build.classes}/" />
+    <javac srcdir="${dir.source.main}"
+           destdir="${dir.build.classes}"
+           deprecation="No"
+           debug="Yes"
+           encoding="utf-8"
+           includeAntRuntime="No"
+    >
+      <classpath refid="project.classpath"/>
+    </javac>
+    <copy todir="${dir.build.classes}" >
+      <fileset dir="${dir.source.main.resources}" >
+        <include name="**"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Compile all test sources.                                           -->
+  <!-- =================================================================== -->
+  <target name="compile.test"
+          depends="compile.main"
+          description="--> compile the test java sources"
+  >
+    <mkdir dir="${dir.build.classes}/" />
+    <javac srcdir="${dir.source.test}"
+           destdir="${dir.build.classes}"
+           deprecation="No"
+           debug="Yes"
+           encoding="utf-8"
+           includeAntRuntime="No"
+    >
+      <classpath refid="project.classpath"/>
+    </javac>
+    <copy todir="${dir.build.classes}" >
+      <fileset dir="${dir.source.test.resources}" >
+        <include name="**"/>
+        <exclude name="**/*.pdf"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Create javadoc                                                      -->
+  <!-- =================================================================== -->
+  <target name="javadoc"
+          depends=""
+          description="--> create javadoc file"
+  >
+    <echo message="${packagenames}" />
+    <mkdir dir="${dir.build.javadoc}"/>
+    <copy file="${filename.license.text}" 
+          todir="${dir.build.javadoc}"
+    />
+    <javadoc sourcepath="${dir.source.main}:${dir.source.test}"
+             destdir="${dir.build.javadoc}"
+             packagenames="${packagenames}"
+             encoding="utf-8"
+             version="true"
+             protected="true"
+             author="true"
+             use="true"
+             additionalparam="-breakiterator"
+             doctitle="${project.fullname}, Version ${version}&lt;br&gt;Examples"
+             windowtitle="${project.fullname}, Version ${version}"
+             header="&lt;b&gt;${project.fullname}  ${version}&lt;/b&gt;"
+             bottom="${copyright.owner}"
+    >
+      <classpath refid="project.classpath"/>
+    </javadoc>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Run the unit tests                                                  -->
+  <!-- =================================================================== -->
+  <target name="test"
+          depends="compile"
+          description="--> run all unit tests"
+  >
+    <echo>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</echo>
+    <echo>           Some tests need a database.                  </echo>
+    <echo>    Run 'startDemodb.bat' or 'startDemodb.sh' first.    </echo>
+    <echo>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</echo>
+    <echo message="Running unit tests" />
+
+    <delete dir="${dir.build.unittest.data}" failonerror="no" />
+    <mkdir dir="${dir.build.unittest.data}" />
+    <junit printsummary="yes"
+           showoutput="yes"
+    >
+      <classpath refid="project.classpath"/>
+      <batchtest todir="${dir.build.unittest.data}">
+        <formatter type="xml" />
+        <fileset refid="junit.files" />
+      </batchtest>
+    </junit>
+
+    <antcall target="testreport" />
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Format the results of the unit tests                                -->
+  <!-- =================================================================== -->
+  <target name="testreport"
+          depends=""
+          description="--> create html from junit xml-files"
+  >
+    <delete dir="${dir.build.unittest.html}" failonerror="no" />
+    <mkdir dir="${dir.build.unittest.html}"/>
+    <junitreport todir="${dir.build.unittest.html}">
+      <fileset refid="junitreport.files" />
+      <report format="frames" todir="${dir.build.unittest.html}"/>
+    </junitreport>
+    <echo message="Please look for index.html in subfolder ${dir.build.unittest.html}" />
+  </target>
+  
+  <!-- =================================================================== -->
+  <!-- This target is for temporary tests only                             -->
+  <!-- =================================================================== -->
+  <target name="tmp"
+      depends=""
+      description="--> run temporary tests"
+  >
+  </target>
+
+</project>

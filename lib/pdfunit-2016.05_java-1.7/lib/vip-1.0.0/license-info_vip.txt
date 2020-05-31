@@ -1,0 +1,5 @@
+The Verify Installation Program (VIP) is intended to be converted into an OpenSource Project.
+
+The current copyright holder is Carsten Siedentop, Cologne.
+
+The sources of this project can be used for free in any project.

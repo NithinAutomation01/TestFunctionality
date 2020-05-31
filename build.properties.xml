@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- PDFUnit - Automated PDF Tests                                             -->
+<!--                                                                           -->
+<!-- Copyright (C) 2016 PDFUnit.com                                            -->
+<!--                                                                           -->
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://pdfunit.com/en/licenseinfo.html               -->
+<!-- Manual_____________: http://pdfunit.com/en/download/index.html            -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<!-- Author: Carsten Siedentop                                                 -->
+<!-- Date:   August 2013                                                       -->
+<!-- ========================================================================= -->
+<root>
+
+  <!-- 
+    The following style needs the attribute:
+      semanticAttributes="true" 
+    in the task <xmlproperty>
+  -->
+
+  <!-- Pay attention to case sensitivity! -->
+
+  <project>
+    <!-- single quotes and blanks allowed in fullname, but no double quotes: -->
+    <fullname            value="Demos for PDFUnit" />
+    <shortname           value="pdfunit-java_demos" />
+    <directory           value="pdfunit-java_demos"  />
+  </project>
+
+  <version               value="2016.05"  />
+  <packagenames          value="**.*" />
+  <main.class            value="unused" />
+
+  <dir>
+    <docs                   value="docs" />
+    <source                 value="src" />
+    <source.main            value="src/main/java" />
+    <source.main.resources  value="src/main/resources" />
+    <source.test            value="src/test/java" />
+    <source.test.resources  value="src/test/resources" />
+  </dir>
+
+  <!-- Modify, add or delete the needed library directories: -->
+  <dir.external.tools value="lib">
+    <pdfunit-java-release value="lib/pdfunit-2016.05_java-1.7" />
+  </dir.external.tools>
+
+  <dir.build  value="build_ant" >
+    <classes                         value="build_ant/classes" />
+    <docs                            value="build_ant/docs" />
+    <javadoc                         value="build_ant/docs/api" />
+    <unittest.data                   value="build_ant/docs/junit/data" />
+    <unittest.html                   value="build_ant/docs/junit/html" />
+    <zip                             value="distribution" />
+  </dir.build>
+
+  <!-- The following definitions must be here, because they use other definitions: -->
+  <filename.license.text value="license-info_pdfunit.txt" />
+  <copyright.owner       value="Copyright (C) &lt;a href='http://www.pdfunit.com'>PDFUnit.com&lt;/a>. See here for &lt;a href='{@docRoot}/${filename.license.text}'>license&lt;/a>." />
+
+</root>

@@ -1,0 +1,90 @@
+*****************************************************************************
+*                                                                           *
+* PDFUnit - Automated PDF Tests                                             *
+*                                                                           *
+* Copyright (C) 2016 PDFUnit.com                                            *
+*                                                                           *
+* This file is part of the commercial library PDFUnit.                      *
+*                                                                           *
+* Legal information__: http://pdfunit.com/en/licenseinfo.html               *
+* Manual_____________: http://pdfunit.com/en/download/index.html            *
+* Contact for license: license[at]pdfunit.com                               *
+*                                                                           *
+*****************************************************************************
+
+Description: 
+------------
+
+  PDFUnit is a tool to verify visible and invisible content of PDF documents.
+  Also the layout can be validated. It provides a fluent API. 
+  
+  Internally it uses the features of JUnit, PDFBox some other libraries.
+  All libraries are listed in 'release-notes.txt'.
+  
+  PDFUnit-Java is available since 07/2012
+  PDFUnit-XML is available since 07/2012
+  PDFUnit-Perl is available since 05/2016
+  PDFUnit-NET is available since 05/2016
+  A user interface is available since 10/2015: PDFUnit-Monitor
+
+Homepage: 
+---------
+  See www.pdfunit.com
+
+Installation:
+-------------
+  Extract the file pdfunit-<version>_<date>.zip into a folder,
+  for example into PROJECT_HOME/lib/pdfunit-<version>. In the following 
+  description this folder is called "INSTALLATION".
+    
+  If you received a license key file, copy it to the same directory.
+  Don't change the name of the license key file.
+    
+  Extend your CLASSPATH: 
+  - INSTALLATION/pdfunit-<version>.jar
+  - INSTALLATION/lib/*.jar
+  - INSTALLATION     (the folder is needed, to read the license key file)
+
+  Here an example for ANT:
+   <path id="project.classpath">
+      <pathelement location="${dir.external.tools.pdfunit}"/>
+      <fileset dir="${dir.external.tools}">
+        <include name="**/*.jar"/>
+      </fileset>
+      <pathelement location="${dir.build.classes}" />
+    </path>
+    
+Update:
+--------
+  When you install a new version, you have to do the same steps.
+  A license key file and the pdfunit-<version>.jar are corresponding to each other. 
+  You can't use a new license key file with an older pdfunit-<version>.jar.
+  
+License:
+--------
+  PDFUnit is a commercial product. You can evaluate it as long as you want,
+  but during the evaluation you have to answer a little math question after start.
+  When using the license key file that question will not appear.
+    
+  When you give a wrong answer to the math question, all test end with
+  the exception 'com.pdfunit.internal.errors.PDFUnitLicenseError' 
+    
+  You can ask for a license here:  info[@]pdfunit.com
+    
+Configuration:
+--------------    
+  PDFUnit comes with one config file: 'pdfunit.config'.
+  See the manual (./docs/pdfunit-<version>_manual_<language>.pdf) for its usage.
+  
+  When the config file could not be found in the CLASSPATH, all
+  tests end with 'junit.framework.AssertionFailedError'.  
+    
+Technical Infos:
+----------------
+  The project was developed with Eclipse.
+  Java 1.7+ is required.
+  PDFUnit runs under Windows and Linux and many JDK's.
+
+Feedback:
+---------
+  info[at]pdfunit.com

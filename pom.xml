@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- PDFUnit - Automated PDF Tests                                             -->
+<!--                                                                           -->
+<!-- Copyright (C) 2016 PDFUnit.com                                            -->
+<!--                                                                           -->
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://www.pdfunit.com/en/licenseinfo.html           -->
+<!-- Manual_____________: http://pdfunit.com/en/download/index.html            -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<!-- Author: Carsten Siedentop                                                 -->
+<!-- Date:   August 2013                                                       -->
+<!-- ========================================================================= -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pdfunit</groupId>
+  <artifactId>pdfunit.demos</artifactId>
+  <version>2016.05</version>
+  
+  <packaging>jar</packaging>
+  <name>Examples using PDFUnit</name>
+
+  <description>
+    This project contains examples how to use PDFUnit in typical test situations.
+  </description>
+  <url>http://www.pdfunit.com/</url>
+
+  <licenses>
+    <license>
+      <name>Individual commercial license</name>
+      <url>http://www.pdfunit.com/en/licenseinfo.html</url>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <id>csi</id>
+      <email>c.siedentop &lt;at&gt; pdfunit.com</email>
+      <name>Carsten Siedentop</name>
+      <organization>PDFUnit.com</organization>
+      <organizationUrl>http://www.pdfunit.com/</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <properties>
+    <compileSource>1.7</compileSource>
+    <targetJdk>1.7</targetJdk>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <maven.test.error.ignore>true</maven.test.error.ignore>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.reporting.outputDirectory>target/site</project.reporting.outputDirectory>
+
+    <!-- versions of plugins -->
+    <version.cglib>3.2.0</version.cglib>
+    <version.clean>3.0.0</version.clean>
+    <version.compiler>3.5.1</version.compiler>
+    <version.dbunit>2.5.2</version.dbunit>
+    <version.deploy>2.8.2</version.deploy>
+    <version.dumbster>1.9.0.2</version.dumbster>
+    <version.hamcrest>1.3</version.hamcrest>
+    <version.hsqldb>2.3.3</version.hsqldb>
+    <version.htmlunit>2.21</version.htmlunit>
+    <version.javadoc>2.10.3</version.javadoc>
+    <version.javax.mail>1.5.5</version.javax.mail>
+    <version.junit>4.12</version.junit>
+    <version.jxr>2.5</version.jxr>
+    <version.log4j>1.7.20</version.log4j>
+    <version.pdfunit>2016.05</version.pdfunit>
+    <version.project.info>2.9</version.project.info>
+    <version.resources>2.7</version.resources>
+    <version.selenium>2.52.0</version.selenium>
+    <version.surefire>2.19.1</version.surefire>
+    <version.vip>1.0.0</version.vip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+    	<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		
+	<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>3.0.0</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>2.9.0</version>
+			<scope>test</scope>
+		</dependency>
+<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+<dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.4.0</version>
+</dependency>
+
+
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<!-- <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>4.0.0</version>
+</dependency> -->
+<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+
+<dependency>
+    <groupId>org.freemarker</groupId>
+    <artifactId>freemarker</artifactId>
+    <version>2.3.23</version>
+</dependency>
+	
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+				<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.18</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java8</artifactId>
+			<version>4.2.2</version>
+		</dependency>
+			
+		
+	
+
+    <!-- 
+      The project 'PDFUnit-Java' is not yet available from a Maven repository.
+      So deploy manually into the repository, for example:
+        mvn install:install-file -Dfile=pdfunit-java-2016.05.jar -DpomFile=pom.xml
+     -->
+    <dependency>
+      <groupId>com.pdfunit</groupId>
+      <artifactId>pdfunit</artifactId>
+      <version>${version.pdfunit}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>${version.cglib}</version>
+      <scope>test</scope>
+    </dependency>
+<dependency>
+   <groupId>com.testautomationguru.pdfutil</groupId>
+   <artifactId>pdf-util</artifactId>
+   <version>0.0.3</version>
+</dependency>
+    <!-- 
+      VIP (Verify Installation Program) is not yet available from a Maven repository.
+      So deploy manually into the repository, for example:
+        mvn install:install-file -Dfile=vip-1.0.0.jar -DpomFile=pom.xml
+     -->
+    <dependency>
+      <groupId>org.verifyinstallation</groupId>
+      <artifactId>vip</artifactId>
+      <version>${version.vip}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.bitmechanic</groupId>
+      <artifactId>dumbster</artifactId>
+      <version>${version.dumbster}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>${version.javax.mail}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>de.redsix</groupId>
+    <artifactId>pdfcompare</artifactId>
+    <version>...</version> <!-- see current version in the maven central tag above -->
+  </dependency>
+    
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>${version.javax.mail}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${version.log4j}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.dbunit</groupId>
+      <artifactId>dbunit</artifactId>
+      <version>${version.dbunit}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>${version.hsqldb}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>net.sourceforge.htmlunit</groupId>
+      <artifactId>htmlunit</artifactId>
+      <version>${version.htmlunit}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>${version.hamcrest}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${version.selenium}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-htmlunit-driver</artifactId>
+      <version>${version.selenium}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <testResources>
+      <testResource>
+        <!-- This directory contains the license key: -->
+        <directory>${basedir}/lib/pdfunit-2016.05_java-1.7</directory>
+        <includes>
+          <include>pdfunit.config</include>
+          <include>license-key_pdfunit-java.lic</include>
+          <include>log4j.xml</include>
+          <include>messages*.properties</include>
+          <include>ZUGFeRD*</include>
+        </includes>
+      </testResource>
+      <testResource>
+        <directory>src/test/resources</directory>
+        <includes>
+          <include>pdf-in-tests/content/diverseContentOnMultiplePages.pdf</include>
+        </includes>
+      </testResource>
+    </testResources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${version.compiler}</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${version.clean}</version>
+        <configuration>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${version.resources}</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${version.deploy}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${version.surefire}</version>
+        <configuration>
+          <includes>
+            <include>**/*Test*.java</include>
+            <include>**/_VerifyInstallation.java</include>
+          </includes>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>${version.jxr}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${version.javadoc}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${version.surefire}</version>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </reporting>
+
+</project>

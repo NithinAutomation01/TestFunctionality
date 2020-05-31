@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><verify.installation.report language="Java" vipVersion="1.0.0">
+  <date>2020-05-13T09:33:01</date>
+  <errors count="0"/>
+  <application product="PDFUnit Demo" version="2016.05">
+    <comment/>
+    <workdirectory dir="C:\Users\user\workspace\Test">
+      <attribute actual="true" name="canRead"/>
+      <attribute actual="true" name="canWrite"/>
+    </workdirectory>
+  </application>
+  <os>
+    <comment/>
+    <expected bitSystem="" name="" versions=""/>
+    <actual bitSystem="amd64" name="windows 8.1"/>
+  </os>
+  <javaRuntime>
+    <expected bitSystem="" version="1.7+"/>
+    <actual bitSystem="amd64" classVersion="52.0" specificationVersion="1.8" vendor="Oracle Corporation" version="1.8.0_191"/>
+  </javaRuntime>
+  <classpath>
+    <location>C:\Users\user\workspace\Test\build_eclipse</location>
+    <location>C:\Users\user\workspace\Test\lib\dumbster_fork-1.9.0.2\dumbster-1.9.0.2-SNAPSHOT.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\commons-collections4-4.1\commons-collections4-4.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\junit-4.12\junit-4.12.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\pdfbox-2.0.0\fontbox-2.0.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\pdfbox-2.0.0\pdfbox-2.0.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\pdfbox-2.0.0\preflight-2.0.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\pdfbox-2.0.0\xmpbox-2.0.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\poi-3.14-20160307.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\poi-ooxml-3.14-20160307.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\poi-ooxml-schemas-3.14-20160307.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\lib\commons-codec-1.10.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\vip-1.0.0\vip-1.0.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\zxing-core-3.2.1\core-3.2.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\zxing-core-3.2.1\javase-3.2.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\pdfunit-java-2016.05.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\bouncycastle-jdk15on-153\bcmail-jdk15on-1.53.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\bouncycastle-jdk15on-153\bcpkix-jdk15on-1.53.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\bouncycastle-jdk15on-153\bcprov-jdk15on-1.53.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\aspectj-1.8.7\aspectjrt-1.8.7.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\selenium-java-2.52.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-htmlunit-driver-2.52.0\selenium-htmlunit-driver-2.52.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\apache-mime4j-0.6.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\bsh-2.0b4.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\cglib-nodep-2.1_3.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\commons-exec-1.3.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\gson-2.3.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\guava-19.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\htmlunit-2.21.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\httpclient-4.5.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\httpcore-4.4.4.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\httpmime-4.5.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\netty-3.5.7.Final.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jcommander-1.48.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jna-platform-4.1.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\hamcrest-core-1.3.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\hamcrest-library-1.3.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\sac-1.3.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\xalan-2.7.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\xercesImpl-2.11.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\xml-apis-1.4.01.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\commons-el-1.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\commons-lang3-3.4.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\htmlunit-core-js-2.17.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jasper-runtime-5.5.15.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\javax.servlet-api-3.1.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-continuation-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-http-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-jmx-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-security-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-server-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-servlet-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jetty-servlets-9.2.13.v20150730.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\jsp-api-2.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\nekohtml-1.9.22.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\phantomjsdriver-1.2.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\selenium-2.52.0\libs\serializer-2.7.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\cssparser-0.9.18.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\jetty-io-9.2.15.v20160210.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\jetty-util-9.2.15.v20160210.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\neko-htmlunit-2.21.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\websocket-api-9.2.15.v20160210.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\websocket-client-9.2.15.v20160210.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\htmlunit-2.21\lib\websocket-common-9.2.15.v20160210.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\ooxml-lib\curvesapi-1.03.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\poi-3.14\ooxml-lib\xmlbeans-2.6.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\javax-mail-api-1.5.5\javax.mail-api-1.5.5.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\com-sun-javax-mail-1.5.5\javax.mail-1.5.5.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\hsqldb-2.3.4\hsqldb.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\dbunit-2.5.2\commons-collections-3.2.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\dbunit-2.5.2\dbunit-2.5.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\dbunit-2.5.2\slf4j-api-1.7.12.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\tess4j-3.1.0.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\commons-beanutils-1.9.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\commons-io-2.4.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\commons-logging-1.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\ghost4j-1.0.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\jai-imageio-core-1.3.1.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\jna-4.2.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\jul-to-slf4j-1.7.19.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\lept4j-1.1.2.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\log4j-1.2.17.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\logback-classic-1.1.6.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\logback-core-1.1.6.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\rococoa-core-0.5.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\slf4j-api-1.7.19.jar</location>
+    <location>C:\Users\user\workspace\Test\lib\pdfunit-2016.05_java-1.7\lib\tess4j-3.1.0\lib\xmlgraphics-commons-1.5.jar</location>
+    <location>/C:/Users/user/Downloads/eclipse/configuration/org.eclipse.osgi/389/0/.cp/</location>
+    <location>/C:/Users/user/Downloads/eclipse/configuration/org.eclipse.osgi/388/0/.cp/</location>
+  </classpath>
+  <classes.in.classpath>
+    <class comment="PDFUnit" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/pdfunit-java-2016.05.jar" name="com.pdfunit.AssertThat" version="51.0"/>
+    <class comment="Dumbster 1.9.0.2" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/dumbster_fork-1.9.0.2/dumbster-1.9.0.2-SNAPSHOT.jar" name="com.dumbster.smtp.SmtpServer" version="50.0"/>
+    <class comment="ZXing, core" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/zxing-core-3.2.1/core-3.2.1.jar" name="com.google.zxing.Reader" version="51.0"/>
+    <class comment="ZXing, javase" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/zxing-core-3.2.1/javase-3.2.1.jar" name="com.google.zxing.client.j2se.ImageReader" version="51.0"/>
+    <class comment="Java Runtime" loadable="true" loadedFrom="(Current Java runtime, 'java.home' = C:\Program Files\Java\jre1.8.0_191)" name="java.lang.System" version="52.0"/>
+    <class comment="Java Mail" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/javax-mail-api-1.5.5/javax.mail-api-1.5.5.jar" name="javax.mail.Message" version="49.0"/>
+    <class comment="XML, DOM-Parser" loadable="true" loadedFrom="(Current Java runtime, 'java.home' = C:\Program Files\Java\jre1.8.0_191)" name="javax.xml.parsers.DocumentBuilderFactory" version="52.0"/>
+    <class comment="XML, SAX Parser" loadable="true" loadedFrom="(Current Java runtime, 'java.home' = C:\Program Files\Java\jre1.8.0_191)" name="javax.xml.parsers.SAXParserFactory" version="52.0"/>
+    <class comment="XML, XSLT Processor" loadable="true" loadedFrom="(Current Java runtime, 'java.home' = C:\Program Files\Java\jre1.8.0_191)" name="javax.xml.transform.TransformerFactory" version="52.0"/>
+    <class comment="Tess4j" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/tess4j-3.1.0.jar" name="net.sourceforge.tess4j.Tesseract" version="51.0"/>
+    <class comment="Apache Commons Collection" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/commons-collections4-4.1/commons-collections4-4.1.jar" name="org.apache.commons.collections4.MultiValuedMap" version="50.0"/>
+    <class comment="Apache Commons Logging" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/tess4j-3.1.0/lib/commons-logging-1.2.jar" name="org.apache.commons.logging.Log" version="46.0"/>
+    <class comment="PDFBox, fontbox" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/fontbox-2.0.0.jar" name="org.apache.fontbox.afm.FontMetrics" version="50.0"/>
+    <class comment="PDFBox" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/pdfbox-2.0.0.jar" name="org.apache.pdfbox.pdmodel.font.encoding.MacOSRomanEncoding" version="50.0"/>
+    <class comment="PDFBox, preflight" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/preflight-2.0.0.jar" name="org.apache.pdfbox.preflight.PreflightDocument" version="50.0"/>
+    <class comment="POI" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/poi-3.14-20160307.jar" name="org.apache.poi.ss.usermodel.Workbook" version="50.0"/>
+    <class comment="Apache XMLBeans" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/ooxml-lib/xmlbeans-2.6.0.jar" name="org.apache.xmlbeans.XmlObject" version="48.0"/>
+    <class comment="PDFBox, xmpbox" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/pdfbox-2.0.0/xmpbox-2.0.0.jar" name="org.apache.xmpbox.XMPMetadata" version="50.0"/>
+    <class comment="AspectJ" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/aspectj-1.8.7/aspectjrt-1.8.7.jar" name="org.aspectj.runtime.reflect.JoinPointImpl" version="45.3"/>
+    <class comment="BouncyCastle" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/bouncycastle-jdk15on-153/bcpkix-jdk15on-1.53.jar" name="org.bouncycastle.cert.X509CertificateHolder" version="49.0"/>
+    <class comment="DBUnit" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/dbunit-2.5.2/dbunit-2.5.2.jar" name="org.dbunit.dataset.IDataSet" version="49.0"/>
+    <class comment="DBUnit" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/hsqldb-2.3.4/hsqldb.jar" name="org.hsqldb.jdbcDriver" version="50.0"/>
+    <class comment="JUnit" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/junit-4.12/junit-4.12.jar" name="org.junit.Assert" version="49.0"/>
+    <class comment="HtmlUnit" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/selenium-2.52.0/selenium-java-2.52.0.jar" name="org.openqa.selenium.htmlunit.HtmlUnitDriver" version="51.0"/>
+    <class comment="Selenium" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/selenium-2.52.0/selenium-java-2.52.0.jar" name="org.openqa.selenium.WebDriver" version="51.0"/>
+    <class comment="POI XML Schema" loadable="true" loadedFrom="file:/C:/Users/user/workspace/Test/lib/pdfunit-2016.05_java-1.7/lib/poi-3.14/poi-ooxml-schemas-3.14-20160307.jar" name="org.openxmlformats.schemas.spreadsheetml.x2006.main.WorksheetDocument" version="50.0"/>
+  </classes.in.classpath>
+  <files.in.classpath>
+    <file exists="true" loadedFrom="C:\Users\user\workspace\Test\build_eclipse" name="pdfunit.config">
+      <comment>Configuration file for PDFUnit.</comment>
+      <attribute actual="" expected="yes" name="canRead"/>
+      <attribute actual="" expected="" name="canWrite"/>
+      <attribute actual="" expected="" name="canExecute"/>
+    </file>
+    <file exists="true" loadedFrom="C:\Users\user\workspace\Test\build_eclipse" name="messages.properties">
+      <comment>English messages for PDFUnit.</comment>
+      <attribute actual="" expected="yes" name="canRead"/>
+      <attribute actual="" expected="" name="canWrite"/>
+      <attribute actual="" expected="" name="canExecute"/>
+    </file>
+    <file exists="true" loadedFrom="C:\Users\user\workspace\Test\build_eclipse" name="messages_de.properties">
+      <comment>German messages for PDFUnit.</comment>
+      <attribute actual="" expected="yes" name="canRead"/>
+      <attribute actual="" expected="" name="canWrite"/>
+      <attribute actual="" expected="" name="canExecute"/>
+    </file>
+  </files.in.classpath>
+</verify.installation.report>

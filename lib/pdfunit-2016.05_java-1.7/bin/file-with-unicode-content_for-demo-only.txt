@@ -1,0 +1,5 @@
+This file is a demo needed to run the conversion into the syntax of Java Hex-Code.
+
+অসমীয়া
+བོད་ཡིག
+한국어

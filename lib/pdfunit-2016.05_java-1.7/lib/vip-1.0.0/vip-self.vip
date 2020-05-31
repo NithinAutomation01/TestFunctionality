@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ========================================================================= -->
+<!--                                                                           -->
+<!-- VIP - Verify Installation Program                                         -->
+<!--                                                                           -->
+<!-- Copyright (C) 2013 www.verify-installation.org                            -->
+<!--                                                                           -->
+<!-- This file is part of the OpenSource Project VIP                           -->
+<!--                                                                           -->
+<!-- Documentation_________: http://verify-installation.org/howto/             -->
+<!-- Contact_______________: info@verify-installation.org                      -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<installation xmlns="http://sourceforge.net/verify.installation.program" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://sourceforge.net/verify.installation.program ../../../vip.xsd"
+              vipVersion="1.0.0"
+              language="Java"
+>
+
+  <comment>
+    Verifying the installation of VIP itself.
+  </comment>
+
+  <application product="Installation Verification Project" 
+               version="1.0.0" 
+  />
+
+  <javaRuntime version="1.6+"
+               comment="Minimum Java 1.6 is required"
+  />
+  
+  <files>
+    <file name="./vip.xsd"              canRead="yes" comment="The XML-Schema file for the VIP schema" />
+    <file name="./vip-java_simple.xslt" canRead="yes" comment="A simple stylesheet to create HTML"  />
+  </files>
+  
+  <classpath loadable="yes">
+    <class name="java.lang.System"                comment="Java Runtime"/>
+    <class name="org.verifyinstallation.VIPMain"  comment="The main class of the Project 'Verify Installation Program'"/>
+  </classpath>
+  
+</installation>

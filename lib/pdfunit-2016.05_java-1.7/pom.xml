@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- ========================================================================= -->
+<!--                                                                           -->   
+<!-- PDFUnit - Automated PDF Tests                                             -->   
+<!--                                                                           -->   
+<!-- Copyright (C) 2016 PDFUnit.com                                            -->   
+<!--                                                                           -->   
+<!-- This file is part of the commercial library PDFUnit.                      -->
+<!--                                                                           -->
+<!-- Legal information__: http://pdfunit.com/en/licenseinfo.html               -->
+<!-- Manual_____________: http://pdfunit.com/en/download/index.html            -->
+<!-- Contact for license: license[at]pdfunit.com                               -->
+<!--                                                                           -->
+<!-- ========================================================================= -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pdfunit</groupId>
+  <artifactId>pdfunit</artifactId>
+  <version>2016.05</version>
+
+  <packaging>jar</packaging>
+  <name>PDFUnit - Automated PDF Tests</name>
+
+  <description>
+    PDFUnit is a tool to write automated tests for PDF documents,
+    testing visible and invisible content.
+  </description>
+  <!-- 
+    The url is put in comment because it influences the generated site. 
+    All URLs in site.xml pointing to the URL defined here are translated into 'index.html'. 
+    That is not what I want. 
+  -->
+  <!-- <url>http://www.pdfunit.com/</url> -->
+
+  <scm>
+    <connection>scm:svn:svn://localhost/pdfunit/pdfunit-java/trunk</connection>
+    <developerConnection>scm:svn:svn://localhost/pdfunit/pdfunit-java/trunk</developerConnection>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>Individual commercial license</name>
+      <url>http://www.pdfunit.com/en/licenseinfo.html</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>csi</id>
+      <email>c.siedentop &lt;at&gt; pdfunit.com</email>
+      <name>Carsten Siedentop</name>
+      <organization>PDFUnit.com</organization>
+      <organizationUrl>http://www.pdfunit.com/</organizationUrl>
+      <roles>
+        <role>Developer</role>
+      </roles>
+      <timezone>+1</timezone>
+    </developer>
+  </developers>
+
+  <properties>
+    <compileSource>1.7</compileSource>
+    <targetJdk>1.7</targetJdk>
+    <dependency.locations.enabled>false</dependency.locations.enabled>
+    <maven.test.error.ignore>true</maven.test.error.ignore>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputDirectory>target/site</project.reporting.outputDirectory>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- Individual properties: -->
+    <version.ant>1.9.6</version.ant>
+    <version.aspectjrt>1.8.8</version.aspectjrt>
+    <version.bouncycastle>1.53</version.bouncycastle>
+    <version.cglib>3.2.0</version.cglib>
+    <version.junit>4.12</version.junit>
+    <version.mockito.all>1.10.8</version.mockito.all>
+    <version.pdfbox>2.0.0</version.pdfbox>
+    <version.pdfunit.anttask>2016.05</version.pdfunit.anttask>
+    <version.poi>3.14</version.poi>
+    <version.powermock>1.6.1</version.powermock>
+    <version.tess4j>3.1.0</version.tess4j>
+    <version.vip>1.0.0</version.vip>
+    <version.xerces>2.11.0</version.xerces>
+    <version.zxing>3.2.1</version.zxing>
+
+    <!-- versions of tools for testing and for Maven itself -->
+    <version.aspectj-plugin>1.8</version.aspectj-plugin>
+    <version.clean>3.0.0</version.clean>
+    <version.cobertura>2.7</version.cobertura>
+    <version.compiler>3.3</version.compiler>
+    <version.deploy>2.8.2</version.deploy>
+    <version.hamcrest>1.3</version.hamcrest>
+    <version.resources>2.7</version.resources>
+    <version.project.info>2.9</version.project.info>
+    <version.surefire>2.19</version.surefire>
+    <version.taglist>2.4</version.taglist>
+
+    <!-- versions of reporting plugins -->
+    <version.checkstyle>2.17</version.checkstyle>
+    <version.javadoc>2.10.3</version.javadoc>
+    <version.jdepend>2.0</version.jdepend>
+    <version.jxr>2.5</version.jxr>
+    <version.maven>2.7</version.maven>
+    <version.pmd>3.6</version.pmd>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.ant</groupId>
+      <artifactId>ant</artifactId>
+      <version>${version.ant}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-module-junit4</artifactId>
+      <version>${version.powermock}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-api-mockito</artifactId>
+      <version>${version.powermock}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-core</artifactId>
+      <version>${version.powermock}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>${version.mockito.all}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Is bouncycastle needed? -->
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>${version.bouncycastle}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcpkix-jdk15on</artifactId>
+      <version>${version.bouncycastle}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcmail-jdk15on</artifactId>
+      <version>${version.bouncycastle}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>${version.cglib}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit is needed by the final product, but it will not be delivered because any development system has it. -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>${version.hamcrest}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${version.aspectjrt}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.1</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>pdfbox</artifactId>
+      <version>${version.pdfbox}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>xmpbox</artifactId>
+      <version>${version.pdfbox}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>fontbox</artifactId>
+      <version>${version.pdfbox}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.pdfbox</groupId>
+      <artifactId>preflight</artifactId>
+      <version>${version.pdfbox}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${version.poi}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${version.poi}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>${version.poi}</version>
+    </dependency>    
+    
+    <dependency>
+      <groupId>net.sourceforge.tess4j</groupId>
+      <artifactId>tess4j</artifactId>
+      <version>${version.tess4j}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>core</artifactId>
+      <version>${version.zxing}</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
+      <version>${version.zxing}</version>
+    </dependency>
+    
+    <!-- VIP (Verify Installation Program) is not yet available from a Maven repository. So deploy manually into the repository: mvn install:install-file 
+      -Dfile=vip-1.0.0.jar -DpomFile=pom.xml -->
+    <dependency>
+      <groupId>org.verifyinstallation</groupId>
+      <artifactId>vip</artifactId>
+      <version>${version.vip}</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- Aware that Maven uses a new version of Xerces. -->
+    <dependency>
+      <groupId>xerces</groupId>
+      <artifactId>xercesImpl</artifactId>
+      <version>${version.xerces}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${version.aspectjrt}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+      </testResource>
+      <testResource>
+        <directory>src/main/resources</directory>
+      </testResource>
+    </testResources>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${version.compiler}</version>
+        <configuration>
+          <source>${compileSource}</source>
+          <target>${compileSource}</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${version.clean}</version>
+        <configuration>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${version.resources}</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${version.deploy}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${version.surefire}</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${version.aspectjrt}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <includes>
+            <include>**/*Test*.java</include>
+            <include>**/_VerifyInstallation.java</include>
+          </includes>
+          <excludes>
+            <exclude>**/_bugresearch/*.java</exclude>
+            <exclude>**/_futurerelease/*.java</exclude>
+            <exclude>**/AbstractTest.java</exclude>
+            <exclude>**/customers/**/*.java</exclude>
+            <exclude>**/*Demo*.java</exclude>
+            <exclude>**/exceptionlogger/*.java</exclude>
+            <exclude>**/GeneralConfiguration.java</exclude>
+            <exclude>**/license/*.java</exclude>
+            <exclude>**/package-info.java</exclude>
+            <exclude>**/performance/**/*.java</exclude>
+            <exclude>**/*Test$*.java</exclude>
+          </excludes>
+
+          <!-- Forking the test is not the fastest way to test, but it's the best, to detect non-threadsafe code. -->
+          <forkCount>1</forkCount>
+          <!-- When forks are reused, then Cobertura ends the build process :-( -->
+          <reuseForks>false</reuseForks>
+          <perCoreThreadCount>true</perCoreThreadCount>
+          <!-- This configuration lets surefire create a file: target\surefire-reports\<classname>-output.txt -->
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>${version.cobertura}</version>
+        <configuration>
+          <formats>
+            <format>html</format>
+            <format>xml</format>
+          </formats>
+          <instrumentation>
+            <excludes>
+              <exclude>**/*Test*.class</exclude>
+              <exclude>**/*$1.class</exclude>
+              <exclude>**/test/**/*.class</exclude>
+              <exclude>**/ComplianceValidator.class</exclude>
+              <exclude>**/DebugHelper.class</exclude>
+              <exclude>**/LogHelper.class</exclude>
+              <exclude>**/customers/**/*.class</exclude>
+              <exclude>**/development/**/*.class</exclude>
+              <exclude>**/exceptionlogger/*.class</exclude>
+              <exclude>**/*Demo*.class</exclude>
+              <exclude>**/_futurerelease/*.class</exclude>
+              <exclude>**/GeneralConfiguration.class</exclude>
+              <exclude>**/license/*.class</exclude>
+              <exclude>**/License*.class</exclude>
+              <exclude>com/pdfunit/internal/matcher/*.class</exclude>
+              <exclude>**/NullObjectField.class</exclude>
+              <exclude>**/package-info.class</exclude>
+              <exclude>**/performance/**/*.class</exclude>
+              <exclude>**/tools/*.class</exclude>
+              <exclude>**/notyetused/*.class</exclude>
+              <exclude>**/migration/tmp/*.class</exclude>
+              <exclude>**/typicalerrors/*.class</exclude>
+              <exclude>**/_VerifyInstallation.class</exclude>
+              <exclude>com/pdfunit/_inprogress/**/*.class</exclude>
+              <exclude>com/pdfunit/internal/spi/*.class</exclude>
+              <exclude>com/pdfunit/obfuscation/*.class</exclude>
+              <exclude>com/pdfunit/test/**/*.class</exclude>
+            </excludes>
+            <ignoreMethodAnnotations>
+              <ignoreMethodAnnotation>com.pdfunit.development.IgnoreCoverage</ignoreMethodAnnotation>
+            </ignoreMethodAnnotations>
+          </instrumentation>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <!-- information here: http://mojo.codehaus.org/aspectj-maven-plugin/usage.html -->
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>aspectj-maven-plugin</artifactId>
+        <version>${version.aspectj-plugin}</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${version.aspectjrt}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>${version.aspectjrt}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <complianceLevel>1.8</complianceLevel>
+          <showWeaveInfo>false</showWeaveInfo>
+          <verbose>false</verbose>
+          <encoding>UTF-8</encoding>
+          <source>${compileSource}</source>
+          <target>${compileSource}</target>
+          <complianceLevel>${compileSource}</complianceLevel>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${version.project.info}</version>
+        <configuration>
+          <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+        </configuration>
+      </plugin>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <version>${version.jxr}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${version.javadoc}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jdepend-maven-plugin</artifactId>
+        <version>${version.jdepend}</version>
+      </plugin>
+
+      <plugin>
+        <!-- ==================================================================== -->
+        <!-- To let PMD generate the report in english language, set the -->
+        <!-- environment variable to this: _JAVA_OPTIONS=-Duser.language=en -->
+        <!-- ==================================================================== -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${version.pmd}</version>
+        <configuration>
+          <aggregate>false</aggregate>
+          <failOnViolation>false</failOnViolation>
+          <format>html</format>
+          <includeTests>true</includeTests>
+          <linkXRef>true</linkXRef>
+          <minimumTokens>100</minimumTokens>
+          <outputEncoding>UTF-8</outputEncoding>
+          <sourceEncoding>UTF-8</sourceEncoding>
+          <targetjdk>${compileSource}</targetjdk>
+          <excludeRoots>
+            <excludeRoot>${basedir}/src/test/java/</excludeRoot>
+          </excludeRoots>
+          <rulesets>
+            <ruleset>${basedir}/etc/analyzer/pmd/pmdRuleset_for-all-projects.xml</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${version.checkstyle}</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <propertiesLocation>${basedir}/etc/analyzer/checkstyle/checkstyle_all-projects_customized.properties</propertiesLocation>
+          <configLocation>${basedir}/etc/analyzer/checkstyle/checkstyle_customized-for-pdfunit.xml</configLocation>
+          <enableRulesSummary>true</enableRulesSummary>
+          <enableSeveritySummary>true</enableSeveritySummary>
+          <!-- This format can not be written as nested tags :-( -->
+          <excludes>**.license.**</excludes>
+          <sourceDirectory>src/main/java</sourceDirectory>
+          <linkXRef>true</linkXRef>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${version.surefire}</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- This avoids duplicate execution of the tests: -->
+              <report>report-only</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>${version.maven}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>taglist-maven-plugin</artifactId>
+        <version>${version.taglist}</version>
+        <configuration>
+          <tagListOptions>
+            <tagClasses>
+              <tagClass>
+                <displayName>Outstanding fixes</displayName>
+                <tags>
+                  <tag>
+                    <matchString>FIXME</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+              <tagClass>
+                <displayName>Markers für TODO's</displayName>
+                <tags>
+                  <tag>
+                    <matchString>TODO</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                  <tag>
+                    <matchString>XXX</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+              <tagClass>
+                <displayName>Marker for refactoring</displayName>
+                <tags>
+                  <tag>
+                    <matchString>REFACTOR</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+              <tagClass>
+                <displayName>To be done in PDFUnit-XML</displayName>
+                <tags>
+                  <tag>
+                    <matchString>TODOXML</matchString>
+                    <matchType>ignoreCase</matchType>
+                  </tag>
+                </tags>
+              </tagClass>
+            </tagClasses>
+          </tagListOptions>
+          <linkXRef>true</linkXRef>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>
