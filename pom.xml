@@ -75,7 +75,7 @@
     <version.htmlunit>2.21</version.htmlunit>
     <version.javadoc>2.10.3</version.javadoc>
     <version.javax.mail>1.5.5</version.javax.mail>
-    <version.junit>4.12</version.junit>
+    <version.junit>4.13.1</version.junit>
     <version.jxr>2.5</version.jxr>
     <version.log4j>1.7.20</version.log4j>
     <version.pdfunit>2016.05</version.pdfunit>
@@ -177,7 +177,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.13.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
