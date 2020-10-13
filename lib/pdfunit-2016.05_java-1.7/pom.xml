@@ -75,7 +75,7 @@
     <version.aspectjrt>1.8.8</version.aspectjrt>
     <version.bouncycastle>1.53</version.bouncycastle>
     <version.cglib>3.2.0</version.cglib>
-    <version.junit>4.12</version.junit>
+    <version.junit>4.13.1</version.junit>
     <version.mockito.all>1.10.8</version.mockito.all>
     <version.pdfbox>2.0.0</version.pdfbox>
     <version.pdfunit.anttask>2016.05</version.pdfunit.anttask>
