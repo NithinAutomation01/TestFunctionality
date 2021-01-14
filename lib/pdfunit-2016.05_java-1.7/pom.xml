@@ -79,7 +79,7 @@
     <version.mockito.all>1.10.8</version.mockito.all>
     <version.pdfbox>2.0.0</version.pdfbox>
     <version.pdfunit.anttask>2016.05</version.pdfunit.anttask>
-    <version.poi>3.14</version.poi>
+    <version.poi>4.1.2</version.poi>
     <version.powermock>1.6.1</version.powermock>
     <version.tess4j>3.1.0</version.tess4j>
     <version.vip>1.0.0</version.vip>
