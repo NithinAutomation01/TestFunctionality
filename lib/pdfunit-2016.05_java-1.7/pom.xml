@@ -77,7 +77,7 @@
     <version.cglib>3.2.0</version.cglib>
     <version.junit>4.12</version.junit>
     <version.mockito.all>1.10.8</version.mockito.all>
-    <version.pdfbox>2.0.0</version.pdfbox>
+    <version.pdfbox>2.0.24</version.pdfbox>
     <version.pdfunit.anttask>2016.05</version.pdfunit.anttask>
     <version.poi>3.14</version.poi>
     <version.powermock>1.6.1</version.powermock>
