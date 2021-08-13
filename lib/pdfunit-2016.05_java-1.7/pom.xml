@@ -73,7 +73,7 @@
     <!-- Individual properties: -->
     <version.ant>1.9.6</version.ant>
     <version.aspectjrt>1.8.8</version.aspectjrt>
-    <version.bouncycastle>1.53</version.bouncycastle>
+    <version.bouncycastle>1.67</version.bouncycastle>
     <version.cglib>3.2.0</version.cglib>
     <version.junit>4.12</version.junit>
     <version.mockito.all>1.10.8</version.mockito.all>
