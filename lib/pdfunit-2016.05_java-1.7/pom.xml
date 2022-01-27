@@ -83,7 +83,7 @@
     <version.powermock>1.6.1</version.powermock>
     <version.tess4j>3.1.0</version.tess4j>
     <version.vip>1.0.0</version.vip>
-    <version.xerces>2.11.0</version.xerces>
+    <version.xerces>2.12.2</version.xerces>
     <version.zxing>3.2.1</version.zxing>
 
     <!-- versions of tools for testing and for Maven itself -->
